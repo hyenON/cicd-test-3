@@ -50,8 +50,6 @@ jobs:
           script_stop: true
           script: |
             # dockerhub 에 토큰을 가지고 로그인 (private일 경우에는 로그인 필요하지만 public은 생략가능
-#            echo ${{secrets.DOCKER_HUB_ACCESS_TOKEN }}
-#            docker login -u ${{secrets.DOCKER_USER}} -- password
             # 기존에 실행되던 컨테이너 중지 && 삭제
             docker stop myweb || true
             docker rm myweb || true
